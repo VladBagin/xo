@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Крестики-нолики онлайн.</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <p>выбери значёк</p>
+        <label
+          ><input type="radio" name="ukon" checked /><img
+            src="rx.svg"
+            width="50"
+          />
+        </label>
+        <label
+          ><input type="radio" name="ukon" /><img src="go.svg" width="50" />
+        </label>
+        <p>
+          <img src="rx.svg" width="10" />&nbsp; введите имя 1 игрока &nbsp<img
+            src="go.svg"
+            width="10"
+          />
+        </p>
+        <label><input type="text" maxlength="15" value="игрок1" /></label>
+        <br />
+        <p>
+          <img src="rx.svg" width="10" />&nbsp; введите имя 2 игрока &nbsp<img
+            src="go.svg"
+            width="10"
+          />
+        </p>
+        <label><input type="text" maxlength="15" value="игрок2" /></label>
+        <p>новая игра</p>
+        <input type="button" value="поехали" />
+      </form>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><img src="rx.svg" /></td>
+            <td><img src="go.svg" /></td>
+            <td><img src="rx.svg" /></td>
+          </tr>
+          <tr>
+            <td><img src="rx.svg" /></td>
+            <td><img src="go.svg" /></td>
+            <td><img src="go.svg" /></td>
+          </tr>
+          <tr>
+            <td><img src="go.svg" /></td>
+            <td><img src="rx.svg" /></td>
+            <td><img src="go.svg" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
