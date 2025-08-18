@@ -1,0 +1,20 @@
+#game{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;display: inline-block;
+}
+#game table{
+    border-collapse: collapse;
+    border: solid 8px white;
+}
+#game table td{
+    border: solid 4px gray;
+    margin: 0;    
+    padding: 0;
+}
+#line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
