@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Крестики-нолики онлайн.</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/xo.js"></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <p>выбери значёк</p>
+        <label
+          ><input type="radio" name="ukon" checked /><img
+            src="rx.svg"
+            width="50"
+          />
+        </label>
+        <label
+          ><input type="radio" name="ukon" /><img src="go.svg" width="50" />
+        </label>
+        <p>
+          <img src="rx.svg" width="10" />&nbsp; введите имя 1 игрока &nbsp<img
+            src="go.svg"
+            width="10"
+          />
+        </p>
+        <label><input type="text" maxlength="15" value="игрок1" /></label>
+        <br />
+        <p>
+          <img src="rx.svg" width="10" />&nbsp; введите имя 2 игрока &nbsp<img
+            src="go.svg"
+            width="10"
+          />
+        </p>
+        <label><input type="text" maxlength="15" value="игрок2" /></label>
+        <p>новая игра</p>
+        <input type="button" value="поехали" />
+      </form>
+
+      <div id="game">
+        <button>Новая игра</button>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <img src="img/mark/n.svg" id="1" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="2" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="3" onclick="alert(this.id)" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/mark/n.svg" id="4" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="5" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="6" onclick="alert(this.id)" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="img/mark/n.svg" id="7" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="8" onclick="alert(this.id)" />
+              </td>
+              <td>
+                <img src="img/mark/n.svg" id="9" onclick="alert(this.id)" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img src="img/lines/0.svg" id="line" />
+      </div>
+    </main>
+  </body>
+</html>
