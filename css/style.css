@@ -15,8 +15,13 @@ h1{
     padding: 0;
     margin: 5px;
 }
+p{
+    padding: 0;
+    margin: 5px;
+}
 button{
     font-size: 20px;
+    font-style: italic;
     padding: 0 50px 0 50px;
     margin: 5px;
     box-shadow: 7px 7px 7px #aaaaaa;
@@ -29,6 +34,26 @@ button:active{
     left: 2px;
     top: 2px
 }
+input{
+    font-size: 20px;
+    font-style: italic;
+}
+.r{
+    text-align: right;
+}
+.l{
+    text-align: left;
+}
+
+#settings{
+    display: inline-block;
+}
+#settings img{
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: bottom;
+}
+
 #game{
     position: relative;
     margin: 10px;
@@ -46,17 +71,17 @@ button:active{
 }
 img[id="1"]{
     position: absolute;
-    left: 10px;
+    left: 5px;
     top: 50px;
 }
 img[id="2"]{
     position: absolute;
-    left: 110px;
+    left: 105px;
     top: 50px;
 }
 img[id="3"]{
     position: absolute;
-    left: 210px;
+    left: 205px;
     top: 50px;
 }
 img[id="4"]{
@@ -76,16 +101,16 @@ img[id="6"]{
 }
 img[id="7"]{
     position: absolute;
-    left: -10px;
+    left: -5px;
     top: 250px;
 }
 img[id="8"]{
     position: absolute;
-    left: 90px;
+    left: 95px;
     top: 250px;
 }
 img[id="9"]{
     position: absolute;
-    left: 190px;
+    left: 195px;
     top: 250px;
 }
