@@ -2,7 +2,7 @@ body{
     text-align: center;
     background-image: url("../img/cage.svg");
     background-repeat: repeat;
-    color: blue;
+    color: #043b7a;
     font-size: 20px;
     font-family: sans-serif;
     font-style: italic;
@@ -113,4 +113,25 @@ img[id="9"]{
     position: absolute;
     left: 195px;
     top: 250px;
+}
+
+#info{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+}
+#info img{
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: bottom;
+}
+#info table{
+    margin: auto;
+}
+#info td{
+    text-align: right;
+}
+
+#message{
+    border-bottom: solid 4px #999999;
 }
