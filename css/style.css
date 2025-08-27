@@ -64,53 +64,46 @@ input{
     width: 300px;
     height: 350px;
 }
-#tabl, #line{
+#game img{
     position: absolute;
+}
+#tabl, #line{
     left: 0;
     top: 50px;
 }
 img[id="1"]{
-    position: absolute;
     left: 5px;
     top: 50px;
 }
 img[id="2"]{
-    position: absolute;
     left: 105px;
     top: 50px;
 }
 img[id="3"]{
-    position: absolute;
     left: 205px;
     top: 50px;
 }
 img[id="4"]{
-    position: absolute;
     left: 0;
     top: 150px;
 }
 img[id="5"]{
-    position: absolute;
     left: 100px;
     top: 150px;
 }
 img[id="6"]{
-    position: absolute;
     left: 200px;
     top: 150px;
 }
 img[id="7"]{
-    position: absolute;
     left: -5px;
     top: 250px;
 }
 img[id="8"]{
-    position: absolute;
     left: 95px;
     top: 250px;
 }
 img[id="9"]{
-    position: absolute;
     left: 195px;
     top: 250px;
 }
@@ -131,7 +124,6 @@ img[id="9"]{
 #info td{
     text-align: right;
 }
-
 #message{
     border-bottom: solid 4px #999999;
 }

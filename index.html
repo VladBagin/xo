@@ -18,18 +18,30 @@
     <h1>Крестики-нолики</h1>
     <div id="settings">
       <p class="r">
-        <input type="text" placeholder="имя игрока 1" size="20" />
+        <input type="text" placeholder="имя игрока 1" size="20" id="player0" />
         <img src="img/mark/x.svg" />
       </p>
       <p class="r">
-        <input type="text" placeholder="имя игрока 2" size="20" />
+        <input
+          type="text"
+          placeholder="имя игрока 2"
+          size="20"
+          id="player1"
+          value="Робот"
+        />
         <img src="img/mark/o.svg" />
       </p>
       <p class="l">
-        <label><input type="radio" name="mode" /> играют два человека</label>
+        <label
+          ><input type="radio" name="mode" onclick="xo.setMode(0)" /> играют два
+          человека</label
+        >
       </p>
       <p class="l">
-        <label><input type="radio" name="mode" /> робот против человека</label>
+        <label
+          ><input type="radio" name="mode" checked onclick="xo.setMode(1)" />
+          робот против человека</label
+        >
       </p>
       <p><button>играть</button></p>
     </div>
