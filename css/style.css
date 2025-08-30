@@ -38,6 +38,9 @@ input{
     font-size: 20px;
     font-style: italic;
 }
+label, input[type=radio]{
+    cursor: pointer;
+}
 .r{
     text-align: right;
 }
@@ -59,7 +62,7 @@ input{
     margin: 10px;
     padding: 0;
     text-align: center;
-    display: inline-block;
+    display: none;
     vertical-align: top;
     width: 300px;
     height: 350px;
@@ -70,6 +73,9 @@ input{
 #tabl, #line{
     left: 0;
     top: 50px;
+}
+#line{
+    display: none;
 }
 img[id="1"]{
     left: 5px;
@@ -109,7 +115,7 @@ img[id="9"]{
 }
 
 #info{
-    display: inline-block;
+    display: none;
     vertical-align: top;
     width: 300px;
 }

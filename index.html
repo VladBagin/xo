@@ -43,21 +43,21 @@
           робот против человека</label
         >
       </p>
-      <p><button>играть</button></p>
+      <p><button onclick="xo.setName()">играть</button></p>
     </div>
     <div id="game">
       <button>новая игра</button>
       <img src="img/grid.svg" id="tabl" />
-      <img src="img/mark/x.svg" id="1" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="2" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="3" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="4" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="5" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="6" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="7" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="8" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="9" onclick="alert(this.id)" />
-      <img src="img/lines/7.svg" id="line" />
+      <img src="img/mark/n.svg" id="1" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="2" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="3" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="4" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="5" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="6" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="7" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="8" onclick="alert(this.id)" />
+      <img src="img/mark/n.svg" id="9" onclick="alert(this.id)" />
+      <img src="img/lines/0.svg" id="line" />
     </div>
     <div id="info">
       <p id="message">ходит Игрок 1 <img src="img/mark/x.svg" /></p>
@@ -76,7 +76,7 @@
           <td>180</td>
         </tr>
       </table>
-      <p><button>настройки</button></p>
+      <p><button onclick="xo.showSettings()">настройки</button></p>
     </div>
   </body>
 </html>
