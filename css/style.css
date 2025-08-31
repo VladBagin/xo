@@ -34,6 +34,10 @@ button:active{
     left: 2px;
     top: 2px
 }
+button[disabled]{
+    background-color: #f0f8ff;
+    cursor: default;
+}
 input{
     font-size: 20px;
     font-style: italic;

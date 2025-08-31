@@ -46,7 +46,7 @@
       <p><button onclick="xo.setName()">играть</button></p>
     </div>
     <div id="game">
-      <button>новая игра</button>
+      <button disabled id="new-game" onclick="alert(1)">новая игра</button>
       <img src="img/grid.svg" id="tabl" />
       <img src="img/mark/n.svg" id="1" onclick="alert(this.id)" />
       <img src="img/mark/n.svg" id="2" onclick="alert(this.id)" />
@@ -64,16 +64,16 @@
       <h1>счёт:</h1>
       <table>
         <tr>
-          <td>Игрок 1:</td>
-          <td>12</td>
+          <td id="score-name-0"></td>
+          <td id="score-value-0">0</td>
         </tr>
         <tr>
-          <td>Игрок 2:</td>
-          <td>7</td>
+          <td id="score-name-1"></td>
+          <td id="score-value-1">0</td>
         </tr>
         <tr>
           <td>ничья:</td>
-          <td>180</td>
+          <td id="draw">0</td>
         </tr>
       </table>
       <p><button onclick="xo.showSettings()">настройки</button></p>

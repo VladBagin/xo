@@ -14,6 +14,7 @@ const xo = {
     },
     first: 0,
     now: 0,
+    draw: 0,
     game:{
         moves: "",
         free: '123456789',
@@ -39,12 +40,14 @@ const xo = {
         for(let i = 0; i < 2; i++){
             let name = document.getElementById("player" + i).value;
             if(name === ''){
-                this.players[i].name = "Игрок "+(i + 1);
-                document.getElementById("player" + i).value = "Игрок "+(i + 1);
+                name = (xo.gameMode === 1 && i == 1) ? "Робот" : ("Игрок "+(i + 1));
+                this.players[i].name = name;
+                document.getElementById("player" + i).value = name;
             }
             else{ 
                 this.players[i].name = name;
             }
+            document.getElementById("score-name-" + i).innerHTML = name + ":";
         }
         document.getElementById("settings").style.display = "none";
         document.getElementById("game").style.display = "inline-block";
