@@ -36,7 +36,11 @@ const xo = {
         document.getElementById("game").style.display = "none";
         document.getElementById("info").style.display = "none";
     },
-    setName(){
+    showGame(){
+       this.players[0].wins = 0;
+       this.players[1].wins = 0;
+       this.draw = 0;
+       this.score();
         for(let i = 0; i < 2; i++){
             let name = document.getElementById("player" + i).value;
             if(name === ''){
@@ -52,5 +56,10 @@ const xo = {
         document.getElementById("settings").style.display = "none";
         document.getElementById("game").style.display = "inline-block";
         document.getElementById("info").style.display = "inline-block";
+    },
+    score(){
+        document.getElementById("score-value-0").innerHTML = this.players[0].wins;
+        document.getElementById("score-value-1").innerHTML = this.players[1].wins;
+        document.getElementById("draw").innerHTML = this.draw;
     }
 } 
