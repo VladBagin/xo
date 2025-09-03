@@ -61,5 +61,24 @@ const xo = {
         document.getElementById("score-value-0").innerHTML = this.players[0].wins;
         document.getElementById("score-value-1").innerHTML = this.players[1].wins;
         document.getElementById("draw").innerHTML = this.draw;
+    },
+    newGame(){
+        document.getElementById("new-game").disabled = true ;
+        this.game.moves = "";
+        this.game.free = "123456789";
+        this.game[0] = "";
+        this.game[1] = "";
+        this.first = Math.round(Math.random());
+        this.now = this.first;
+        for( let i = 1; i <= 9; i++){
+            document.getElementById(i).src = this.src("n");
+        }
+        document.getElementById("line").style.display = "none";
+    },
+    src(k){
+        if(k === 'n') return "img/mark/n.svg";
+        else if(k === 'x')  return "img/mark/x.svg";
+        else if(k === 'o')  return "img/mark/o.svg";
+        else return "img/lines/" + k +".svg";
     }
 } 

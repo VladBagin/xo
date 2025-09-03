@@ -79,7 +79,7 @@ label, input[type=radio]{
     top: 50px;
 }
 #line{
-    display: none;
+    /*display: none;*/
 }
 img[id="1"]{
     left: 5px;
