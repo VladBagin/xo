@@ -1,25 +1,25 @@
 const xo = {
     gameMode: 1,
     players: {
-        0: {
+        1: {
             name: "Игрок 1",
             mark: 'x',
             wins: 0
         },
-        1: {
+        2: {
             name: "Игрок 2",
             mark: 'o',
             wins: 0
         }
     },
-    first: 0,
-    now: 0,
+    first: 1,
+    now: 1,
     draw: 0,
     game:{
         moves: "",
         free: '123456789',
-        0: "",
-        1: ""
+        1: "",
+        2: ""
     },
     setMode(mode){
         this.gameMode = mode;
@@ -37,15 +37,15 @@ const xo = {
         document.getElementById("info").style.display = "none";
     },
     showGame(){
-       this.players[0].wins = 0;
        this.players[1].wins = 0;
+       this.players[2].wins = 0;
        this.draw = 0;
        this.score();
-        for(let i = 0; i < 2; i++){
+        for(let i = 1; i <= 2; i++){
             let name = document.getElementById("player" + i).value.slice(0, 20);
             document.getElementById("player" + i).value = name;
             if(name === ''){
-                name = (xo.gameMode === 1 && i == 1) ? "Робот" : ("Игрок "+(i + 1));
+                name = (xo.gameMode === 1 && i == 2) ? "Робот" : ("Игрок "+(i));
                 this.players[i].name = name;
                 document.getElementById("player" + i).value = name;
             }
@@ -59,17 +59,17 @@ const xo = {
         document.getElementById("info").style.display = "inline-block";
     },
     score(){
-        document.getElementById("score-value-0").innerHTML = this.players[0].wins;
         document.getElementById("score-value-1").innerHTML = this.players[1].wins;
+        document.getElementById("score-value-2").innerHTML = this.players[2].wins;
         document.getElementById("draw").innerHTML = this.draw;
     },
     newGame(){
         document.getElementById("new-game").disabled = true ;
         this.game.moves = "";
         this.game.free = "123456789";
-        this.game[0] = "";
         this.game[1] = "";
-        this.first = Math.round(Math.random());
+        this.game[2] = "";
+        this.first = Math.round(Math.random()) + 1;
         this.now = this.first;
         for( let i = 1; i <= 9; i++){
             document.getElementById(i).src = this.src("n");

@@ -4,7 +4,10 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Крестики-нолики онлайн</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
 
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
@@ -19,7 +22,7 @@
     <h1>Крестики-нолики</h1>
     <div id="settings">
       <p class="r">
-        <input type="text" placeholder="имя игрока 1" size="20" id="player0" />
+        <input type="text" placeholder="имя игрока 1" size="20" id="player1" />
         <img src="img/mark/x.svg" />
       </p>
       <p class="r">
@@ -27,7 +30,7 @@
           type="text"
           placeholder="имя игрока 2"
           size="20"
-          id="player1"
+          id="player2"
           value="Робот"
         />
         <img src="img/mark/o.svg" />
@@ -61,16 +64,16 @@
       <img src="img/lines/0.svg" id="line" />
     </div>
     <div id="info">
-      <p id="message">ходит Игрок 1 <img src="img/mark/x.svg" /></p>
+      <p id="message"></p>
       <h1>счёт:</h1>
       <table>
         <tr>
-          <td id="score-name-0"></td>
-          <td id="score-value-0">0</td>
-        </tr>
-        <tr>
           <td id="score-name-1"></td>
           <td id="score-value-1">0</td>
+        </tr>
+        <tr>
+          <td id="score-name-2"></td>
+          <td id="score-value-2">0</td>
         </tr>
         <tr>
           <td>ничья:</td>
