@@ -51,6 +51,20 @@ label, input[type=radio]{
 .l{
     text-align: left;
 }
+.x{
+    background-image: url("../img/mark/x.svg");
+    opacity: 0.1;
+}
+.x:hover{
+    opacity: 0.2;
+}
+.o{
+    background-image: url("../img/mark/o.svg");
+    opacity: 0.1;
+}
+.o:hover{
+    opacity: 0.2;
+}
 
 #settings{
     display: inline-block;

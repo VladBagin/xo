@@ -42,7 +42,8 @@ const xo = {
        this.draw = 0;
        this.score();
         for(let i = 0; i < 2; i++){
-            let name = document.getElementById("player" + i).value;
+            let name = document.getElementById("player" + i).value.slice(0, 20);
+            document.getElementById("player" + i).value = name;
             if(name === ''){
                 name = (xo.gameMode === 1 && i == 1) ? "Робот" : ("Игрок "+(i + 1));
                 this.players[i].name = name;
@@ -74,11 +75,26 @@ const xo = {
             document.getElementById(i).src = this.src("n");
         }
         document.getElementById("line").style.display = "none";
+        this.nextMove();
+    },
+    nextMove(){
+        let message = 'Ходит: ' + this.players[this.now].name + ' ' + this.img(this.now);
+        document.getElementById("message").innerHTML = message;
+        for(let i = 1; i <= 9; i++){
+            document.getElementById(i).classList.remove('x', 'o');
+        }
+        for(let i of this.game.free){
+            document.getElementById(i).classList.add(this.players[this.now].mark);
+        }
     },
     src(k){
         if(k === 'n') return "img/mark/n.svg";
         else if(k === 'x')  return "img/mark/x.svg";
         else if(k === 'o')  return "img/mark/o.svg";
         else return "img/lines/" + k +".svg";
+    },
+    img(n){
+        return '<img src = "' + this.src(this.players[n].mark) +'" />';
     }
+
 } 
