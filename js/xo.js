@@ -57,6 +57,7 @@ const xo = {
         document.getElementById("settings").style.display = "none";
         document.getElementById("game").style.display = "inline-block";
         document.getElementById("info").style.display = "inline-block";
+        this.newGame();
     },
     score(){
         document.getElementById("score-value-1").innerHTML = this.players[1].wins;
@@ -87,6 +88,18 @@ const xo = {
             document.getElementById(i).classList.add(this.players[this.now].mark);
         }
     },
+    move(id){
+        if(this.game.free.indexOf(id) === -1) return;
+        this.game.moves += id;
+        this.game[this.now] += id;
+        this.game.free = this.game.free.replace(id, '');
+        document.getElementById(id).src = this.src(this.players[this.now].mark);
+        for(let i = 1; i <= 9; i++){
+            document.getElementById(i).classList.remove('x', 'o');
+        }
+        this.now = (this.now === 1) ? 2 : 1;
+        this.nextMove();
+    },
     src(k){
         if(k === 'n') return "img/mark/n.svg";
         else if(k === 'x')  return "img/mark/x.svg";
@@ -96,5 +109,6 @@ const xo = {
     img(n){
         return '<img src = "' + this.src(this.players[n].mark) +'" />';
     }
+
 
 } 

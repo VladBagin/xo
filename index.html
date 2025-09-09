@@ -52,19 +52,19 @@
     <div id="game">
       <button id="new-game" onclick="xo.newGame();">новая игра</button>
       <img src="img/grid.svg" id="tabl" />
-      <img src="img/mark/n.svg" id="1" onclick="alert(this.id)" />
-      <img src="img/mark/o.svg" id="2" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="3" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="4" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="5" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="6" onclick="alert(this.id)" />
-      <img src="img/mark/x.svg" id="7" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="8" onclick="alert(this.id)" />
-      <img src="img/mark/n.svg" id="9" onclick="alert(this.id)" class="x" />
+      <img src="img/mark/n.svg" id="1" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="2" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="3" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="4" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="5" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="6" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="7" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="8" onclick="xo.move(this.id)" />
+      <img src="img/mark/n.svg" id="9" onclick="xo.move(this.id)" />
       <img src="img/lines/0.svg" id="line" />
     </div>
     <div id="info">
-      <p id="message"></p>
+      <p id="message"><img src="img/mark/n.svg" /></p>
       <h1>счёт:</h1>
       <table>
         <tr>
