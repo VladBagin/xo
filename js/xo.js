@@ -21,13 +21,14 @@ const xo = {
         1: "",
         2: ""
     },
+    lines: ["123", "456", "789", "147", "258", "369", "159", "357"],
     setMode(mode){
         this.gameMode = mode;
         if(mode === 1){
-            document.getElementById('player1').value = 'Робот';
+            document.getElementById('player2').value = 'Робот';
         }
         else{
-            document.getElementById('player1').value = '';
+            document.getElementById('player2').value = '';
         }
         
     },
@@ -97,8 +98,34 @@ const xo = {
         for(let i = 1; i <= 9; i++){
             document.getElementById(i).classList.remove('x', 'o');
         }
+        if(this.checkEnd()) return;
         this.now = (this.now === 1) ? 2 : 1;
         this.nextMove();
+    },
+    checkEnd(){
+        for(let id = 1; id <= 2; id++){
+            for(let line in this.lines){
+                let counter = 0;
+                for(let i of this.lines[line]){
+                    if(this.game[id].indexOf(i) !== -1) counter++;
+                }
+                if(counter === 3){
+                    this.endGame(id, line);
+                    return true;
+                }
+            }
+        }
+        return false;
+    },
+    endGame(id, line){
+        document.getElementById("new-game").disabled = false;
+        this.game.free = "";
+        this.players[id].wins++;
+        this.score();
+        document.getElementById("line").src = this.src(line);
+        document.getElementById("line").style.display = "block";
+        let message = 'Победил: ' + this.players[id].name + ' ' + this.img(id);
+        document.getElementById("message").innerHTML = message;
     },
     src(k){
         if(k === 'n') return "img/mark/n.svg";
@@ -109,6 +136,4 @@ const xo = {
     img(n){
         return '<img src = "' + this.src(this.players[n].mark) +'" />';
     }
-
-
 } 
