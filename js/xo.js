@@ -103,6 +103,7 @@ const xo = {
         this.nextMove();
     },
     checkEnd(){
+        let counterDraw = 0;
         for(let id = 1; id <= 2; id++){
             for(let line in this.lines){
                 let counter = 0;
@@ -113,7 +114,19 @@ const xo = {
                     this.endGame(id, line);
                     return true;
                 }
+                if(counter > 0) counterDraw++;
             }
+        }
+        if(counterDraw === 16){
+            const element = document.getElementById("new-game");
+            if(element.disabled) this.draw++;
+            element.disabled = false;
+            this.score();
+        }
+        if(this.game.free.length === 0){
+            let message = this.img(1) + " Ничья " + this.img(2);
+            document.getElementById("message").innerHTML = message;
+            return true;
         }
         return false;
     },
