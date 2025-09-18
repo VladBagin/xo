@@ -88,6 +88,7 @@ const xo = {
         for(let i of this.game.free){
             document.getElementById(i).classList.add(this.players[this.now].mark);
         }
+        setTimeout('robot.move()', 300);
     },
     move(id){
         if(this.game.free.indexOf(id) === -1) return;
