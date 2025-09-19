@@ -82,13 +82,14 @@ const xo = {
     nextMove(){
         let message = 'Ходит: ' + this.players[this.now].name + ' ' + this.img(this.now);
         document.getElementById("message").innerHTML = message;
-        for(let i = 1; i <= 9; i++){
-            document.getElementById(i).classList.remove('x', 'o');
+        if(this.gameMode === 0 || this.now === 1){
+             for(let i of this.game.free){
+                document.getElementById(i).classList.add(this.players[this.now].mark);
+            }
         }
-        for(let i of this.game.free){
-            document.getElementById(i).classList.add(this.players[this.now].mark);
+        else{
+            robot.move();
         }
-        setTimeout('robot.move()', 300);
     },
     move(id){
         if(this.game.free.indexOf(id) === -1) return;
