@@ -26,9 +26,11 @@ const xo = {
         this.gameMode = mode;
         if(mode === 1){
             document.getElementById('player2').value = 'Робот';
+            document.getElementById('p_level').style.display = "block";
         }
         else{
             document.getElementById('player2').value = '';
+            document.getElementById('p_level').style.display = "none";
         }
         
     },
@@ -78,6 +80,7 @@ const xo = {
         }
         document.getElementById("line").style.display = "none";
         this.nextMove();
+        robot.setLevel(0);
     },
     nextMove(){
         let message = 'Ходит: ' + this.players[this.now].name + ' ' + this.img(this.now);
@@ -90,6 +93,9 @@ const xo = {
         else{
             robot.move();
         }
+    },
+    click(id){
+        if(this.gameMode === 0 || this.now === 1) this.move(id);
     },
     move(id){
         if(this.game.free.indexOf(id) === -1) return;
@@ -141,6 +147,8 @@ const xo = {
         document.getElementById("line").style.display = "block";
         let message = 'Победил: ' + this.players[id].name + ' ' + this.img(id);
         document.getElementById("message").innerHTML = message;
+        let sing = (id === 1) ? 1 : -1;
+        robot.setLevel(sing);
     },
     src(k){
         if(k === 'n') return "img/mark/n.svg";
